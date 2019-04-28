@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<body>
+<div class="jumbotron">
+    <form method="POST"	action="php/verifica.php" accept-charset="UTF-8">
+        <div class="form-group"><label>Edit1</label><br>
+            <input type="number" size="35" name="nromat" required="true" class="form-control"></div>
+        <div><label>edit2:</label><br>
+            <input type="text" size="35" name="nome" required = "true" class="form-control"></div>
+        <div><label>edit3:</label><br>
+            <input type="text" size="50" name="cidade" required = "true" class="form-control"></div>
+        <div><label>edti4:</label><br>
+            <input type="text" name="estado" maxlength="2" required = "true" class="form-control"></div>
+        <div><label>edit5:</label><br>
+            <input type="text" name="sexo" required = "true" class="form-control"></div>
+        <div><label>edit6:</label><br>
+            <input type="date" name="datanasc" required = "true" class="form-control"></div>
+        <div><label>edit7:</label><br>
+            <input type="number" name="codcurso" required = "true" class="form-control"></div><br>
+    
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <button type="submit" class="btn btn-primary">Editar</button>
+        <button type="submit" class="btn btn-primary">Excluir</button>
+        <button class="btn"><a href="index.html" class="btn btn-primary">Voltar</a>
+        </button>
+    </form>
+</div>
+</body>
+</html>
