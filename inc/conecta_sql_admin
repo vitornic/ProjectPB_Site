@@ -1,0 +1,7 @@
+<?php
+
+$conexao_adm = mysqli_connect('localhost','root','admin123','nomeDB');
+
+mysqli_set_charset($conexao_adm,'utf-8');
+
+?>
