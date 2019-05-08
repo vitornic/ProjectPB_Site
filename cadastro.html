@@ -5,26 +5,51 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Panic Button</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<div class="collapse navbar-collapse" id="navbarColor01">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="cadastro.html">Cadastro</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="php/visualizar.php">Visualizar</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="php/verifica.php">test</a>
+			</li>
+		  </ul>
+		  <form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="text" placeholder="Search">
+			<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+		  </form>
+		</div>
+	</nav>
 <div class="jumbotron">
     <form method="POST"	action="php/verifica.php" accept-charset="UTF-8">
-        <div class="form-group"><label>Edit1</label><br>
-            <input type="number" size="35" name="edit1" required="true" class="form-control"></div>
-        <div><label>edit2:</label><br>
-            <input type="text" size="35" name="edit2" required = "true" class="form-control"></div>
-        <div><label>edit3:</label><br>
-            <input type="text" size="50" name="edit3" required = "true" class="form-control"></div>
-        <div><label>edti4:</label><br>
-            <input type="text" name="edit4" maxlength="2" required = "true" class="form-control"></div>
-        <div><label>edit5:</label><br>
-            <input type="text" name="edit5" required = "true" class="form-control"></div>
-        <div><label>edit6:</label><br>
-            <input type="date" name="edit6" required = "true" class="form-control"></div>
-        <div><label>edit7:</label><br>
-            <input type="number" name="edit7" required = "true" class="form-control"></div><br>
+        <div class="form-group"><label>CPF:</label><br>
+            <input type="number" size="11" name="CPF" required="true" class="form-control"></div>
+        <div><label>Senha:</label><br>
+            <input type="password" size="20" name="Senha" required = "true" class="form-control"></div>
+        <div><label>Nome:</label><br>
+            <input type="text" size="50" name="Nome" required = "true" class="form-control"></div>
+        <div><label>Sobrenome:</label><br>
+            <input type="text" name="Sobrenome" maxlength="50" required = "true" class="form-control"></div>
+        <div><label>Cidade:</label><br>
+            <input type="text" name="Cidade" maxlength="50" required = "true" class="form-control"></div>
+        <div><label>Estado:</label><br>
+            <input type="text" name="Estado" maxlength="2" required = "true" class="form-control"></div>
+        <div><label>Data de Nascimento:</label><br>
+            <input type="date" name="DataNasc" required = "true" class="form-control"></div><br>
     
         <button type="submit" class="btn btn-primary">Cadastrar</button>
-        <button type="submit" class="btn btn-primary">Editar</button>
-        <button type="submit" class="btn btn-primary">Excluir</button>
         <button class="btn"><a href="index.html" class="btn btn-primary">Voltar</a>
         </button>
     </form>

@@ -1,6 +1,6 @@
 <?php
 
-$conexao = mysqli_connect('localhost','root','','nomeDB');
+$conexao = mysqli_connect('localhost','root','','usuarios');
 
 mysqli_set_charset($conexao,'utf-8');
 
