@@ -15,10 +15,9 @@ $sql .= "('$CPF','$Senha','$Nome','$Sobrenome','$Cidade','$Estado','$DataNasc')"
 
 if ($conexao->query($sql) == TRUE) {
 	ini_set('max_execution_time', 300);
-	echo  "Cadastrado com sucesso!";
-} else {
-	echo "Erro: " . $sql . "<br>" . $conexao->error;
-}
+	echo '<script>alert("Dados cadastrados!");</script>';
+		
+} else { echo '<script>alert("Não foi possível cadastrar!");</script>'; }
 
 $conexao->close();
 
