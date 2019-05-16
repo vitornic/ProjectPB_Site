@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<body>
+    <div class="custom-padding">
+		<nav>
+			<div class="logo">Logo</div>
+			<div>
+				<ul class="menu-area">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="cadastro.html">Cadastro</a>
+				</li>
+				<li>
+					<a href="php/visualizar.php">Visualizar</a>
+				</li>
+				<li>
+					<a href="php/verifica.php">test</a>
+				</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<form method="POST"	action="php/verifica.php" class="boxform" accept-charset="UTF-8">
+	    <h1>Cadastro</h1>
+	    <input placeholder="CPF" type="number" size="11" pattern="[0-9]{0,60}" name="CPF" required="true">
+	   	<input placeholder="Senha" type="password" size="20" name="Senha" required = "true">
+	    <input placeholder="Nome" type="text" size="50" name="Nome" pattern="[A-Za-z]{0,60}" required = "true">
+	    <input placeholder="Sobrenome" type="text" name="Sobrenome" pattern="[A-Za-z]{0,60}" maxlength="50" required = "true">
+	    <input placeholder="Cidade" type="text" name="Cidade" pattern="[A-Za-z]{0,60}" maxlength="50" required = "true">  
+	    <input hidden="true" type="" name="Estado">
+			<select name="Estado" size="1">
+				<option value="AC">AC</option>
+				<option value="AL">AL</option>
+				<option value="AP">AP</option>
+				<option value="AM">AM</option>
+				<option value="BA">BA</option>
+				<option value="CE">CE</option>
+				<option value="DF">DF</option>
+				<option value="ES">ES</option>
+				<option value="GO">GO</option>
+				<option value="MA">MA</option>
+				<option value="MT">MT</option>
+				<option value="MS">MS</option>
+				<option value="MG">MG</option>
+				<option value="PA">PA</option>
+				<option value="PB">PB</option>
+				<option value="PR">PR</option>
+				<option value="PE">PE</option>
+				<option value="PI">PI</option>
+				<option value="RJ">RJ</option>
+				<option value="RN">RN</option>
+				<option value="RS">RS</option>
+				<option value="RO">RO</option>
+				<option value="RR">RR</option>
+				<option value="SC">SC</option>
+				<option value="SP">SP</option>
+				<option value="SE">SE</option>
+				<option value="TO">TO</option>
+			</select>
+	    	<input type="date" name="DataNasc" required = "true"></div><br>
+	    	<input type="submit">
+	    </form>
+</body>
+</html>

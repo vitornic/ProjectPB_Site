@@ -2,22 +2,23 @@
 
 include 'conecta_mysql.inc';
 
-$CPF 	        = $_POST['CPF'];
+$Email 	        = $_POST['Email'];
 $Senha          = $_POST['Senha'];
-$Nome           = $_POST['Nome'];
-$Sobrenome      = $_POST['Sobrenome'];
-$Cidade         = $_POST['Cidade'];
-$Estado         = $_POST['Estado'];
-$DataNasc       = $_POST['DataNasc'];
 
 $sql = "INSERT INTO `normalusers` VALUES";
-$sql .= "('$CPF','$Senha','$Nome','$Sobrenome','$Cidade','$Estado','$DataNasc')";
+$sql .= "('$Email','$Senha')";
 
-if ($conexao->query($sql) == TRUE) {
+if (getenv("REQUEST_METHOD") == "POST") {
+    if ($conexao->query($sql) == TRUE) {
 	ini_set('max_execution_time', 300);
-	echo '<script>alert("Dados cadastrados!");</script>';
-		
-} else { echo '<script>alert("Não foi possível cadastrar!");</script>'; }
+	echo '<script>alert("Dados cadastrados!");
+		location.href = "../cadastro.html";
+	</script>';
+
+	} else { echo '<script>alert("Não foi possível cadastrar!");
+				location.href = "../cadastro.html";
+		</script>'; }
+}
 
 $conexao->close();
 
